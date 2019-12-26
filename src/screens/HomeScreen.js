@@ -5,14 +5,13 @@ const HomeScreen = ({ navigation }) => {
     const {navigate} = navigation;
     return (
         <View>
-            <Text style={ styles.header }>LiftNotes</Text>
             <Button 
                 title="Log current section"
-                onPress={()=> console.log("button pressed")}
+                onPress={()=> navigate('Session')}
                 />
             <Button
                 onPress={()=> navigate('List')}
-                title="Lifting History"
+                title="Workouts"
                 />
         </View>
     )

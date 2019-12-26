@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, FlatList, Text } from 'react-native';
+import { View, FlatList } from 'react-native';
 import WorkOutDetail from '../Components/WorkOutDetail';
 
 const WorkOutListScreen = (props) => {
@@ -56,7 +56,7 @@ const WorkOutListScreen = (props) => {
         <View>
             <FlatList 
                 data={ worktOuts }
-                keyExtractor={(item, index) => index}
+                keyExtractor={(item) => item.workOut}
                 renderItem={ ({ item }) =>  <WorkOutDetail workOut={item.workOut} imgSrc={item.imgSrc} description={item.description}/> }
             />
         </View>
