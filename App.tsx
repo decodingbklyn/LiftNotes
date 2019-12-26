@@ -2,13 +2,13 @@ import React from 'react';
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import HomeScreen from './src/screens/HomeScreen';
-import WorkOutListScreen from './src/screens/WorkOutListScreen';
+import ExerciseListScreen from './src/screens/ExerciseListScreen';
 import WorkOutSessionScreen from './src/screens/WorkOutSessionScreen';
 
 const navigator = createStackNavigator (
   {
   Home: {screen: HomeScreen},
-  List: {screen: WorkOutListScreen},
+  List: {screen: ExerciseListScreen},
   Session: {screen: WorkOutSessionScreen}
   },
   {

@@ -11,7 +11,7 @@ const HomeScreen = ({ navigation }) => {
                 />
             <Button
                 onPress={()=> navigate('List')}
-                title="Workouts"
+                title="Exercises"
                 />
         </View>
     )
