@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
 import { View, FlatList, TouchableOpacity, Text, StyleSheet, TextInput } from 'react-native';
 import ExerciseDetails from '../Components/ExerciseDetails';
-import AddExerciseDetails from '../Components/AddExercise'
-import FontAwesomeIcon from '@fortawesome/react-native-fontawesome';
+import AddExerciseDetails from '../Components/AddExercise';
 import Data from '../data.json';
 
 const ExerciseListScreen = (props) => {
@@ -38,13 +37,13 @@ const ExerciseListScreen = (props) => {
 
 const styles = StyleSheet.create({
     buttonStyles: {
-        backgroundColor: '#000',
+        backgroundColor: '#000080',
         width: '100%',
     },
     buttonTopStyles: {
         color: '#fff',
         fontSize: 25,
-        fontWeight: '600',
+        fontWeight: '700',
         width: "100%",
         textAlign: "center"
     },
