@@ -9,6 +9,7 @@ const LogWorkOutSessionScreen = () => {
     const [ saveExercise, setSaveExercise ] = useState('')
     const [ saveSets, setSaveSets ] = useState('')
     const [ saveReps, setSaveReps ] = useState('')
+    const [ saveRest, setSaveRest ] = useState('')
 
     //List of exercise names 
     const list = exerciseList.map( ( item ) => {
@@ -77,6 +78,17 @@ const LogWorkOutSessionScreen = () => {
                 <Picker.Item label={ "18" } value={ "18" } />
                 <Picker.Item label={ "19" } value={ "19" } />
                 <Picker.Item label={ "20" } value={ "20" } />
+            </Picker>
+            <Text>Rest Between Sets:</Text>
+            <Picker
+                selectedValue={saveRest}
+                value={saveRest}
+                onValueChange={(itemValue, itemIndex) => setSaveRest(itemValue)}
+            >
+                <Picker.Item label={ "30" } value={ "30" } />
+                <Picker.Item label={ "60" } value={ "60" } />
+                <Picker.Item label={ "90" } value={ "90" } />
+                <Picker.Item label={ "120" } value={ "120" } />
             </Picker>
             <Text>Notes</Text>
             <TextInput 

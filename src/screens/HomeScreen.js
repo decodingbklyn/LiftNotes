@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faBlog, faList, faDumbbell, faHeartbeat } from '@fortawesome/free-solid-svg-icons';
+import { faBlog, faList, faDumbbell, faHeartbeat, faStopwatch } from '@fortawesome/free-solid-svg-icons';
 import AdBanner from '../Components/AdBanner'
 
 const HomeScreen = ({ navigation }) => {
@@ -36,6 +36,20 @@ const HomeScreen = ({ navigation }) => {
             >
                 <Text style={ styles.textButtonStyles }>LiftNotes Blog</Text>
                 <FontAwesomeIcon icon={ faBlog } style={ styles.iconStyles } size={40} />
+            </TouchableOpacity>
+            <TouchableOpacity
+                onPress={()=> navigate('Timer')}
+                style={ styles.buttonStyles }
+            >
+                <Text  style={ styles.textButtonStyles }>Timer</Text>
+                <FontAwesomeIcon icon={ faStopwatch } style={ styles.iconStyles }/>
+            </TouchableOpacity>
+            <TouchableOpacity
+                // onPress={()=> navigate('Timer')}
+                style={ styles.buttonStyles }
+            >
+                <Text  style={ styles.textButtonStyles }>Pending</Text>
+                <FontAwesomeIcon icon={ faStopwatch } style={ styles.iconStyles }/>
             </TouchableOpacity>
             <AdBanner style={ styles.adBannerStyles }/>
         </View>

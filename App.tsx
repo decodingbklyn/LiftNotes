@@ -6,6 +6,7 @@ import ExerciseListScreen from './src/screens/ExerciseListScreen';
 import LogWorkOutSessionScreen from './src/screens/LogWorkOutSessionScreen';
 import BlogScreen from './src/screens/BlogScreen';
 import WorkOutListScreen from './src/screens/WorkOutListScreen';
+import TimerScreen from './src/screens/TimerScreen'
 
 const navigator = createStackNavigator (
   	{
@@ -13,7 +14,8 @@ const navigator = createStackNavigator (
 		EList: {screen: ExerciseListScreen},
 		Log: {screen: LogWorkOutSessionScreen},
 		Blog: {screen: BlogScreen },
-		WList: {screen: WorkOutListScreen }
+		WList: {screen: WorkOutListScreen }, 
+		Timer: {screen: TimerScreen}
   	},
   	{
 		initialRouteName: 'Home',
