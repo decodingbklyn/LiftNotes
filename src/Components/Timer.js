@@ -1,35 +1,24 @@
-import React, { useState } from 'react';
+import React, { useReducer } from 'react';
 import { Text, StyleSheet, View, TouchableOpacity, Picker, Header } from 'react-native';
+    //timer state reducer
+const reducer = (state, action) => {
+    //state === {start: num , stop: 0, reset}
+    switch
+}
 
 const Timer = (props) => {
-    const [time, setTime ] = useState(0)
-    const [startTimer, setStartTimer ] = useState(false)
-    const [stopTimer, setStopTimer ] = useState(false)
-    const [stopTime, setStopTime] = useState('')
 
-    let count = 0
 
-    function start(stopTime){
-        let timerInterval =  setInterval( ()=> {
-            setTime( count++ )
-            if( count == Number.parseInt(stopTime)+1) {
-                return clearInterval(timerInterval)
-            }
-        }, 1000 )
-        console.log('start: '+  startTimer,'stop: ' + stopTimer)
+    const timerFunctiontionality = {
+        start: ()=> {
+
+        }, 
+        stop: ()=> {
+            
+        }, 
+        reset: () => clearTimeout()
     }
 
-    function stop(){
-        console.log('stopped')
-        setTime(count)
-    }
-
-    function reset() {
-        console.log('reset')
-        setStartTimer( false )
-        setStopTimer( false )
-        setTime(count = 0)
-    }
 
     return (
         <View>
@@ -43,17 +32,14 @@ const Timer = (props) => {
                 value={stopTime}
                 onValueChange={(itemValue, itemIndex) => setStopTime(itemValue)}
             >
-                <Picker.Item label={"30"} value={"30"}/>
-                <Picker.Item label={"60"} value={"60"}/>
-                <Picker.Item label={"90"} value={"90"}/>
-                <Picker.Item label={"120"} value={"120"}/>
+                <Picker.Item label={"30"} value={30}/>
+                <Picker.Item label={"60"} value={60}/>
+                <Picker.Item label={"90"} value={90}/>
+                <Picker.Item label={"120"} value={120}/>
             </Picker>
             <View style={styles.buttonContainter}>
                 <TouchableOpacity
-                    onPress={()=> {
-                        setStartTimer(true)
-                        start(stopTime)
-                    } } 
+                    onPress={()=> } 
                     style={ styles.startButtonStyles }
                 >
                     <Text style={ styles.buttonTextStyles }>Start</Text>
@@ -61,8 +47,7 @@ const Timer = (props) => {
 
                 <TouchableOpacity
                     onPress={()=> {
-                        setStopTimer( true )
-                        stop()
+                       
                     } }
                     style={ styles.stopButtonStyles }
                 >
@@ -70,7 +55,7 @@ const Timer = (props) => {
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                    onPress={()=> reset() }
+                    onPress={()=> }
                     style={ styles.resetButtonStyles }
                 >
                     <Text style={ styles.buttonTextStyles }>Reset</Text>

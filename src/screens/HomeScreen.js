@@ -48,7 +48,7 @@ const HomeScreen = ({ navigation }) => {
                 // onPress={()=> navigate('Timer')}
                 style={ styles.buttonStyles }
             >
-                <Text  style={ styles.textButtonStyles }>Pending</Text>
+                <Text  style={ styles.textButtonStyles }>Learn More</Text>
                 <FontAwesomeIcon icon={ faStopwatch } style={ styles.iconStyles }/>
             </TouchableOpacity>
             <AdBanner style={ styles.adBannerStyles }/>

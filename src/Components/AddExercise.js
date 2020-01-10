@@ -31,6 +31,10 @@ const AddExercise = () => {
                     clearTextOnFocus
                 />
                 <Text>Enter A Description For The Work Out</Text>
+                <View>
+                    <Text>Preview: </Text>
+                    <Text>{exerciseDescrInput} </Text>
+                </View>
                 <TextInput 
                     style={{ maxHeight: 100, height: "100%", width: "100%", borderColor: 'gray', borderWidth: 1 }}
                     onChangeText={ text => setExerciseDescrInput(text)}
